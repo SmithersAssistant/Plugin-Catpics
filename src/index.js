@@ -1,9 +1,7 @@
-import React from 'react'
-
 const CATPICS_COMPONENT = 'com.robinmalfait.catpics'
 
 export default robot => {
-
+  const {React} = robot.dependencies
   const {Images} = robot.cards
 
   const Catpics = ({images, ...other}) => {
