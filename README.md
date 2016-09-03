@@ -10,4 +10,4 @@ install smithers-catpics
 
 ## Preview
 
-![](https://d.pr/i/14xnA+)
+![](https://d.pr/i/LAq+)
