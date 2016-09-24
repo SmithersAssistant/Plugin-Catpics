@@ -1,10 +1,10 @@
 const CATPICS_COMPONENT = 'com.robinmalfait.catpics'
 
 export default robot => {
-  const {React} = robot.dependencies
-  const {Images} = robot.cards
+  const { React } = robot.dependencies
+  const { Images } = robot.cards
 
-  const Catpics = ({images, ...other}) => {
+  const Catpics = ({ images, ...other }) => {
     return (
       <Images
         {...other}
@@ -13,7 +13,6 @@ export default robot => {
       />
     )
   }
-  
 
   robot.registerComponent(Catpics, CATPICS_COMPONENT);
 
@@ -21,13 +20,13 @@ export default robot => {
     var images = []
 
     for (var i = 0; i < count; i++) {
-        images.push({
-            title: `Cat Picture ${i + 1}`,
-            src: `http://thecatapi.com/api/images/get?format=src&type=gif&time=${+new Date}-${i}`
-        })
+      images.push({
+        title: `Cat Picture ${i + 1}`,
+        src: `http://thecatapi.com/api/images/get?format=src&type=gif&time=${+new Date}-${i}`
+      })
     }
 
-    robot.addCard(CATPICS_COMPONENT, {images})
+    robot.addCard(CATPICS_COMPONENT, { images })
   }
 
   robot.listen(/^catpics$/, {
